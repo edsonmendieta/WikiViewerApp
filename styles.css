@@ -26,6 +26,36 @@ body {
     height: 100%;
 }
 
+#searchContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#searchBar {
+    height: 25px;
+    border: orange solid 3px;
+    border-radius: 20px;
+    font-size: 95%;
+}
+
+#searchBar:focus {
+    outline: none;
+}
+
+#searchBar[type=text] {
+    padding-left: 10px;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    display: none;
+}
+
 #resultContainer {
     height: auto;
     margin-right: 10%;
