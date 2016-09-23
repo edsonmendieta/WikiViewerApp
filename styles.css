@@ -34,18 +34,34 @@ body {
 }
 
 #searchBar {
-    height: 25px;
-    border: orange solid 3px;
-    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    border: #3FDD90 solid 4px;
     font-size: 95%;
-}
-
-#searchBar:focus {
+    border-radius: 50px;
+    cursor: pointer;
+    transition: width 300ms ease-in-out;
     outline: none;
+
 }
 
-#searchBar[type=text] {
-    padding-left: 10px;
+#searchBar[type=text]: {
+    padding-left: 15px;
+}
+
+#opened {
+    height: 30px;
+    border: #3FDD90 solid 4px;
+    font-size: 95%;
+    transition: width 300ms ease-in-out;
+    outline: none;
+    width: 200px;
+    border-radius: 20px;
+    cursor: auto;
+}
+
+#opened[type=text] {
+    padding-left: 15px;
 }
 
 .visible {
@@ -82,10 +98,6 @@ body {
     padding-right: 2%;
     padding-top: 15px;
     color: white;
-}
-
-#title {
-
 }
 
 #intro {
