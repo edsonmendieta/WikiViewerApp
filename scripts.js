@@ -5,14 +5,12 @@ searchBar.addEventListener('click', openClose, false);
 
 function openClose() {
 
+    var handle = document.getElementById('line');
+
     if(searchBar.getAttribute('class') == 'waiting') {
 
-        //searchBar.style.width = "200px";
-        //searchBar.style.borderRadius = "20px";
-        //searchBar.style.cursor = "auto";
+        handle.setAttribute('id', 'lineGone');
 
-        //var circleClick = document.createAttribute('id');
-        //circleClick.value = "opened";
-        searchBar.setAttribute('id', 'opened');
+        searchBar.setAttribute('id', 'openedBar');
     }
 }

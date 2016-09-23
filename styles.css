@@ -40,28 +40,56 @@ body {
     font-size: 95%;
     border-radius: 50px;
     cursor: pointer;
-    transition: width 300ms ease-in-out;
     outline: none;
+    transition: width 300ms ease-in-out;
+    transition-delay: 300ms;
 
 }
 
-#searchBar[type=text]: {
-    padding-left: 15px;
+#searchBar[type=text] {
+    padding-left: 0px;
+    transition: padding-left 300ms ease-in-out;
+    transition-delay: 300ms;
 }
 
-#opened {
+#openedBar {
+    width: 200px;
     height: 30px;
     border: #3FDD90 solid 4px;
     font-size: 95%;
-    transition: width 300ms ease-in-out;
-    outline: none;
-    width: 200px;
     border-radius: 20px;
     cursor: auto;
+    outline: none;
+    transition: width 300ms ease-in-out;
+    transition-delay: 300ms;
 }
 
-#opened[type=text] {
+#openedBar[type=text] {
     padding-left: 15px;
+    transition: padding-left 300ms ease-in-out;
+    transition-delay: 300ms;
+}
+
+#line {
+    position: relative;
+    width: 20px;
+    height: 3px;
+    transform: rotate(40deg);
+    background-color:blue;
+    left: -9px;
+    top: 36px;
+    transition: width 300ms ease-in-out;
+}
+
+#lineGone {
+    position: relative;
+    width: 0;
+    height: 3px;
+    transform: rotate(40deg);
+    background-color:blue;
+    left: -9px;
+    top: 36px;
+    transition: width 300ms ease-in-out;
 }
 
 .visible {
