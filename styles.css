@@ -42,17 +42,15 @@ body {
     cursor: pointer;
     outline: none;
 
-    animation-name: expand;
-    animation-duration: 2s;
+    /* "animation-name" added dynamically in JS */
+    animation-duration: 300ms;
     animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
+    animation-delay: 300ms;
+    animation-iteration-count: 1;
     animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
-#searchBar[type=text] {
-    padding-left: 0;
-}
 
 /*#openedBar {
     width: 200px;
@@ -161,11 +159,8 @@ footer {
     0% {
         width: 30px;
     }
-    50% {
-        width: 200px;
-    }
     100% {
-        width: 30px;
+        width: 200px;
     }
 }
 
