@@ -42,12 +42,12 @@ body {
     cursor: pointer;
     outline: none;
 
-    -webkit-animation-name: expand;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-delay: 0s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: normal;
+    animation-name: expand;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
 }
 
 #searchBar[type=text] {
@@ -157,19 +157,7 @@ footer {
 
 /*** expand keyframe **************************************/
 
-/*@keyframes expand {
-    0% {
-        width: 30px;
-    }
-    50% {
-        width: 200px;
-    }
-    100% {
-        width: 30px;
-    }
-}*/
-
-@-webkit-keyframes expand {
+@keyframes expand {
     0% {
         width: 30px;
     }
@@ -180,41 +168,5 @@ footer {
         width: 30px;
     }
 }
-
-/*@-moz-keyframes expand {
-    0% {
-        -moz-width: 30px;
-    }
-    50% {
-        -moz-width: 200px;
-    }
-    100% {
-        -moz-width: 30px;
-    }
-}*/
-
-/*@-o-keyframes expand {
-    0% {
-        -o-width: ;
-    }
-    50% {
-        -o-width: ;
-    }
-    100% {
-        -o-width: ;
-    }
-}
-
-@-ms-keyframes expand {
-    0% {
-        -ms-width: ;
-    }
-    50% {
-        -ms-width: ;
-    }
-    100% {
-        -ms-width: ;
-    }
-}*/
 
 /***************************************************/
