@@ -1,16 +1,17 @@
 
-var searchBar = document.getElementById('searchBar');
 
 searchBar.addEventListener('click', openClose, false);
 
 function openClose() {
 
-    var handle = document.getElementById('line');
+    var searchBar = document.getElementById('searchBar');
 
-    if(searchBar.getAttribute('class') == 'waiting') {
+    // var handle = document.getElementById('line');
 
-        handle.setAttribute('id', 'lineGone');
+    if(searchBar.getAttribute('class') == 'closed') {
 
-        searchBar.setAttribute('id', 'openedBar');
+        
+
+        // handle.setAttribute('id', 'lineGone');
     }
 }
