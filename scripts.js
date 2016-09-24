@@ -5,12 +5,15 @@ searchBar.addEventListener('click', openClose, false);
 function openClose() {
 
     // declaring variables
-    var smallLine = document.getElementById('line');
+    var smallLine = document.getElementById('handleLine');
     var searchBar = document.getElementById('searchBar');
+    var topX = document.getElementById('topX');
+    var bottomX = document.getElementById('bottomX');
 
     // conditional
     if(searchBar.getAttribute('class') == 'closed') {
 
+        // links 'shrinkLine' keyframe to element
         smallLine.style.animationName = "shrinkLine";
 
         // links 'expand' keyframe to element
@@ -27,6 +30,12 @@ function openClose() {
             // reverts cursor style back to text version
             searchBar.style.cursor = "text";
         }
+
+        // links 'topDash' keyframe to element
+       topX.style.animationName = "topDash";
+
+       // links 'bottomDash' keyframe to element
+       bottomX.style.animationName = "bottomDash";
 
         // denotes that search-bar is open
         searchBar.setAttribute('class', 'open');

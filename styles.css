@@ -51,7 +51,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-#line {
+#handleLine {
     position: relative;
     width: 20px;
     height: 3px;
@@ -69,15 +69,41 @@ body {
     animation-fill-mode: forwards;
 }
 
-/*#lineGone {
-    position: relative;
-    width: 0;
-    height: 3px;
-    transform: rotate(40deg);
-    background-color:blue;
-    left: -9px;
-    top: 36px;
-}*/
+#topX {
+  position: relative;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transform: rotate(135deg);
+  left: -15px;
+  top: 10px;
+
+  /*"animation-name" added dynamically in JS */
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 600ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+#bottomX {
+  position: relative;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transform: rotate(45deg);
+  left: -25px;
+  top: 30px;
+
+  /*"animation-name" added dynamically in JS */
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 600ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
 
 .visible {
     visibility: visible;
@@ -165,6 +191,40 @@ footer {
     }
     100% {
         width: 0;
+    }
+}
+
+/***************************************************/
+
+/*** topDash keyframe **************************************/
+
+@keyframes topDash {
+    0% {
+        width: 0;
+        left: -15px;
+        top: 10px;
+    }
+    100% {
+        width: 10px;
+        left: -25px;
+        top: 20px;
+    }
+}
+
+/***************************************************/
+
+/*** bottomDash keyframe **************************************/
+
+@keyframes bottomDash {
+    0% {
+        width: 0;
+        left: -25px;
+        top: 30px;
+    }
+    100% {
+        width: 10px;
+        left: -35px;
+        top: 20px;
     }
 }
 
