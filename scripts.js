@@ -4,9 +4,14 @@ searchBar.addEventListener('click', openClose, false);
 
 function openClose() {
 
+    // declaring variables
+    var smallLine = document.getElementById('line');
     var searchBar = document.getElementById('searchBar');
 
+    // conditional
     if(searchBar.getAttribute('class') == 'closed') {
+
+        smallLine.style.animationName = "shrinkLine";
 
         // links 'expand' keyframe to element
         searchBar.style.animationName = "expand";

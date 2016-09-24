@@ -51,33 +51,25 @@ body {
     animation-fill-mode: forwards;
 }
 
-
-/*#openedBar {
-    width: 200px;
-    height: 30px;
-    border: #3FDD90 solid 4px;
-    font-size: 95%;
-    border-radius: 20px;
-    cursor: auto;
-    outline: none;
-}
-
-#openedBar[type=text] {
-    padding-left: 15px;
-}*/
-
-/*#line {
+#line {
     position: relative;
     width: 20px;
     height: 3px;
     transform: rotate(40deg);
-    background-color:blue;
+    background-color: #3FDD90;
     left: -9px;
     top: 36px;
-    transition: width 300ms ease-in-out;
+
+    /*"animation-name" added dynamically in JS */
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
-#lineGone {
+/*#lineGone {
     position: relative;
     width: 0;
     height: 3px;
@@ -85,7 +77,6 @@ body {
     background-color:blue;
     left: -9px;
     top: 36px;
-    transition: width 300ms ease-in-out;
 }*/
 
 .visible {
@@ -161,6 +152,19 @@ footer {
     }
     100% {
         width: 200px;
+    }
+}
+
+/***************************************************/
+
+/*** shrinkLine keyframe **************************************/
+
+@keyframes shrinkLine {
+    0% {
+        width: 20px;
+    }
+    100% {
+        width: 0;
     }
 }
 
