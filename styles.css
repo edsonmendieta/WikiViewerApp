@@ -69,14 +69,25 @@ body {
     animation-fill-mode: forwards;
 }
 
+#clickBox {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    /*border: blue dashed 1px;*/
+    left: -46px;
+    top: 15px;
+    cursor: pointer;
+}
+
 #topX {
   position: relative;
   width: 0;
   height: 2px;
-  background-color: red;
+  background-color: #4F5151;
   transform: rotate(135deg);
   left: -15px;
   top: 10px;
+  cursor: pointer;
 
   /*"animation-name" added dynamically in JS */
     animation-duration: 300ms;
@@ -91,10 +102,12 @@ body {
   position: relative;
   width: 0;
   height: 2px;
-  background-color: red;
+  background-color: #4F5151;
   transform: rotate(45deg);
   left: -25px;
   top: 30px;
+  cursor: pointer;
+
 
   /*"animation-name" added dynamically in JS */
     animation-duration: 300ms;

@@ -1,14 +1,16 @@
+// declaring global variables
+var searchBar = document.getElementById('searchBar');
+var smallLine = document.getElementById('handleLine');
+var topX = document.getElementById('topX');
+var bottomX = document.getElementById('bottomX');
+var clickBox = document.getElementById('box');
+
+// event listeners
+searchBar.addEventListener('click', openBar, false);
 
 
-searchBar.addEventListener('click', openClose, false);
-
-function openClose() {
-
-    // declaring variables
-    var smallLine = document.getElementById('handleLine');
-    var searchBar = document.getElementById('searchBar');
-    var topX = document.getElementById('topX');
-    var bottomX = document.getElementById('bottomX');
+// global functions
+function openBar() {
 
     // conditional
     if(searchBar.getAttribute('class') == 'closed') {
@@ -24,8 +26,9 @@ function openClose() {
 
         function textPadding() {
 
-            // adds space b/w border and start of text
+            // adds space b/w border and start/end of text
             searchBar.style.paddingLeft = "15px";
+            searchBar.style.paddingRight = "25px";
 
             // reverts cursor style back to text version
             searchBar.style.cursor = "text";
@@ -40,5 +43,16 @@ function openClose() {
         // denotes that search-bar is open
         searchBar.setAttribute('class', 'open');
 
+        setTimeout(addClickBox, 900);
+
+        function addClickBox() {
+
+            // gives element styling: positions directly on top of "x"
+            clickBox.setAttribute('id', 'clickBox');
+        }
+
     }
+
 }
+
+//function
