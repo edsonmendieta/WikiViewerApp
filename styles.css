@@ -76,7 +76,7 @@ body {
     position: relative;
     width: 10px;
     height: 10px;
-    border: blue dashed 1px;
+    /*border: blue dashed 1px;*/
     left: -46px;
     top: 15px;
     cursor: pointer;

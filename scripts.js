@@ -115,7 +115,8 @@ function closeBar() {
     // sets handle line to original width & thus visible again
     smallLine.style.width = "20px";
 
-    
+    // 'x' - box no longer available for clicking until bar opens again
+    document.getElementById('clickBox').setAttribute('id', 'box');
 
     // gives search-bar 'closed' class so openBar() executes again on cue
     searchBar.setAttribute('class', 'closed');
