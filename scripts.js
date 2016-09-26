@@ -123,3 +123,22 @@ function closeBar() {
 
 
 }
+
+window.addEventListener('load', wikiResults, false);
+
+function wikiResults() {
+
+    var xhr = new XMLHttpRequest();
+    // wiki api COR's requires origin to be set as parameter in URL request
+    xhr.open('GET', 'https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&format=json&search=baseball');
+    xhr.onreadystatechange = resultsHandler;
+    xhr.send();
+}
+
+function resultsHandler() {
+
+    if(this.readyState == 4 && this.status == 200) {
+
+        console.log(JSON.parse(this.response));
+    }
+}
