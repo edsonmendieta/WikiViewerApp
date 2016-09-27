@@ -137,60 +137,56 @@ function wikiResults() {
 
 function resultHandler() {
 
-    console.log(JSON.parse(this.response));
+    // console.log(JSON.parse(this.response).query.pages[0]);
 
-    // if(this.readyState == 4 && this.status == 200) {
-    //
-    //     for(i = 1; i <= 3; i++) {
-    //
-    //         var big3 = JSON.parse(this.response)[i];
-    //
-    //
-    //         for(z = 0; z < 10; z++) {
-    //
-    //             if(i == 1) {
-    //
-    //                 // nodeList of elements with this class name
-    //                 var titleElements = document.getElementsByClassName('title');
-    //                 // makes a text node of all article titles
-    //                 var titleNode = document.createTextNode(big3[z]);
-    //
-    //                 // appends title to 'title' div of corresponding index #
-    //                 // 0 to 0, 5 to 5, etc.
-    //                 titleElements[z].appendChild(titleNode);
-    //
-    //             }
-    //
-    //             else if(i == 2) {
-    //
-    //                 // nodeList of elements with this class name
-    //                 var introElements = document.getElementsByClassName('intro');
-    //                 // makes a text node of all article intro sentences
-    //                 var introNode = document.createTextNode(big3[z]);
-    //
-    //                 // appends intro to 'intro' div of corresponding index #
-    //                 // 0 to 0, 5 to 5, etc.
-    //                 introElements[z].appendChild(introNode);
-    //             }
-    //
-    //             else if (i == 3) {
-    //
-    //                 // nodeList of elements with this class name
-    //                 var linkElements = document.getElementsByClassName('link');
-    //
-    //                 // sets element, w/class 'link', href to correspoding link # from API response
-    //                 linkElements[z].setAttribute('href', big3[z]);
-    //             }
-    //         }
-    //     }
+    if(this.readyState == 4 && this.status == 200) {
 
-        // var ontario = JSON.parse(this.response)[1][5];
-        // console.log(JSON.parse(this.response));
-        // console.log(ontario);
-        // var ontarioTextNode = document.createTextNode(ontario);
-        // document.getElementsByClassName('title')[1].appendChild(ontarioTextNode);
-        // console.log(document.getElementsByClassName('title')[1].value = ontario);
-    //}
+
+        for(z = 0; z < 10; z++) {
+
+            for(i = 0; i < 3; i++) {
+
+                var articleArray = JSON.parse(this.response).query.pages;
+
+
+                if(i == 0) {
+
+                    // nodeList of elements with this class name
+                    var titleElements =document.getElementsByClassName('title');
+                    // makes a text node of all article titles
+                    var titleNode =document.createTextNode(articleArray[z].title);
+
+                    // appends title to 'title' div ofcorresponding     index #
+                    // 0 to 0, 5 to 5, etc.
+                    titleElements[z].appendChild(titleNode);
+
+                }
+
+                else if(i == 1) {
+
+                    // nodeList of elements with this class name
+                    var introElements =document.getElementsByClassName('intro');
+                    // makes a text node of all article introsentences
+                    var introNode =document.createTextNode(articleArray[z].extract);
+
+                    // appends intro to 'intro' div ofcorresponding     index #
+                    // 0 to 0, 5 to 5, etc.
+                    introElements[z].appendChild(introNode);
+                }
+
+                else if (i == 2) {
+
+                    // nodeList of elements with this class name
+                    var linkElements    =document.getElementsByClassName('link');
+
+                    // sets element, w/class 'link', href   tocorrespoding link # from API response
+                    linkElements[z].setAttribute('href', articleArray[z].fullurl);
+                }
+            } // end of 2nd for-loop
+        } // end of 1st for-loop
+    } // end of function
+
+
 }
 
 
