@@ -154,6 +154,10 @@ body {
     background-color: #4F5151;
 }
 
+.link {
+    text-decoration: none;
+}
+
 .title, .intro {
     padding-left: 2%;
     padding-right: 2%;

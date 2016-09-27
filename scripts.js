@@ -171,17 +171,14 @@ function resultHandler() {
                     introElements[z].appendChild(introNode);
                 }
 
-                // else if (i == 3) {
-                //
-                //     // nodeList of elements with this class name
-                //     var introElements = document.getElementsByClassName('intro');
-                //     // makes a text node of all article intro sentences
-                //     var introNode = document.createTextNode(big3[z]);
-                //
-                //     // appends intro to 'intro' div of corresponding index #
-                //     // 0 to 0, 5 to 5, etc.
-                //     introElements[z].appendChild(introNode);
-                // }
+                else if (i == 3) {
+
+                    // nodeList of elements with this class name
+                    var linkElements = document.getElementsByClassName('link');
+
+                    // sets element, w/class 'link', href to correspoding link # from API response
+                    linkElements[z].setAttribute('href', big3[z]);
+                }
             }
         }
 
