@@ -133,19 +133,19 @@ body {
     display: none;
 }
 
-#resultContainer {
+.resultContainer {
     height: auto;
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 10px;
 }
 
-#resultContainer:hover {
+.resultContainer:hover {
     /*background-color: #DAF7A6;*/
     background-color: #3FDD90;
 }
 
-#wikiResult {
+.wikiResult {
     height: auto;
     margin-right: 0;
     margin-left: 6.5px;
@@ -154,14 +154,14 @@ body {
     background-color: #4F5151;
 }
 
-#title, #intro {
+.title, .intro {
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 15px;
     color: white;
 }
 
-#intro {
+.intro {
     padding-bottom: 15px;
 }
 

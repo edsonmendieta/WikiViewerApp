@@ -131,14 +131,65 @@ function wikiResults() {
     var xhr = new XMLHttpRequest();
     // wiki api COR's requires origin to be set as parameter in URL request
     xhr.open('GET', 'https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&format=json&search=baseball');
-    xhr.onreadystatechange = resultsHandler;
+    xhr.onreadystatechange = resultHandler;
     xhr.send();
 }
 
-function resultsHandler() {
+function resultHandler() {
 
     if(this.readyState == 4 && this.status == 200) {
 
-        console.log(JSON.parse(this.response));
+        for(i = 1; i <= 3; i++) {
+
+            var big3 = JSON.parse(this.response)[i];
+
+
+            for(z = 0; z < 10; z++) {
+
+                if(i == 1) {
+
+                    // nodeList of elements with this class name
+                    var titleElements = document.getElementsByClassName('title');
+                    // makes a text node of all article titles
+                    var titleNode = document.createTextNode(big3[z]);
+
+                    // appends title to 'title' div of corresponding index #
+                    // 0 to 0, 5 to 5, etc.
+                    titleElements[z].appendChild(titleNode);
+
+                }
+
+                else if(i == 2) {
+
+                    // nodeList of elements with this class name
+                    var introElements = document.getElementsByClassName('intro');
+                    // makes a text node of all article intro sentences
+                    var introNode = document.createTextNode(big3[z]);
+
+                    // appends intro to 'intro' div of corresponding index #
+                    // 0 to 0, 5 to 5, etc.
+                    introElements[z].appendChild(introNode);
+                }
+
+                // else if (i == 3) {
+                //
+                //     // nodeList of elements with this class name
+                //     var introElements = document.getElementsByClassName('intro');
+                //     // makes a text node of all article intro sentences
+                //     var introNode = document.createTextNode(big3[z]);
+                //
+                //     // appends intro to 'intro' div of corresponding index #
+                //     // 0 to 0, 5 to 5, etc.
+                //     introElements[z].appendChild(introNode);
+                // }
+            }
+        }
+
+        // var ontario = JSON.parse(this.response)[1][5];
+        // console.log(JSON.parse(this.response));
+        // console.log(ontario);
+        // var ontarioTextNode = document.createTextNode(ontario);
+        // document.getElementsByClassName('title')[1].appendChild(ontarioTextNode);
+        // console.log(document.getElementsByClassName('title')[1].value = ontario);
     }
 }
