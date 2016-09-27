@@ -130,7 +130,7 @@ function wikiResults() {
 
     var xhr = new XMLHttpRequest();
     // wiki api COR's requires origin to be set as parameter in URL request
-    xhr.open('GET', 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info%7Cextracts&generator=search&inprop=url&exsentences=1&exlimit=10&exintro=1&gsrsearch=pooh+bear&origin=*');
+    xhr.open('GET', 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info%7Cextracts&generator=search&utf8=1&formatversion=2&inprop=url&exsentences=1&exlimit=10&exintro=1&explaintext=1&exsectionformat=plain&gsrsearch=pooh+bear&origin=*');
     xhr.onreadystatechange = resultHandler;
     xhr.send();
 }
