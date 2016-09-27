@@ -190,3 +190,18 @@ function resultHandler() {
         // console.log(document.getElementsByClassName('title')[1].value = ontario);
     }
 }
+
+
+window.addEventListener('keypress', searchWords, false);
+
+function searchWords(e) {
+
+    if(e.code == 'Enter') {
+
+        if((document.getElementById('searchBar').getAttribute('class')) == 'open') {
+
+            console.log(document.getElementById('searchBar').value);
+        }
+    }
+
+}
