@@ -39,7 +39,7 @@ body {
 #searchContainer {
     display: flex;
     justify-content: center;
-    margin-top: 65%;
+    margin-top: 300px;
     margin-bottom: 25px;
 }
 
@@ -185,6 +185,7 @@ body {
 }
 
 footer {
+    color: #4F5151;
     width: 100%;
     height: auto;
     text-align: center;
