@@ -130,12 +130,27 @@ window.addEventListener('keypress', searchWords, false);
 
 function searchWords(e) {
 
+    var titleDivs = document.getElementsByClassName('title');
+    var introDivs = document.getElementsByClassName('intro');
+
     var userWords = document.getElementById('searchBar').value;
     var whitespace = /\s/g;
 
     if(e.code == 'Enter') {
 
         if((document.getElementById('searchBar').getAttribute('class')) == 'open') {
+
+            // empty the divs if they aren't empty on user's search
+            if(titleDivs[0].childNodes.length !== 0 && introDivs[0].childNodes.length !== 0) {
+
+                for(i = 0; i < 10; i++) {
+
+                    titleDivs[i].removeChild(titleDivs[i].childNodes[0]);
+
+                    introDivs[i].removeChild(introDivs[i].childNodes[0]);
+                }
+
+            }
 
             userSearchMod = userWords.replace(whitespace, '+');
 
@@ -154,6 +169,7 @@ function wikiResults() {
     xhr.onreadystatechange = resultHandler;
     xhr.send();
 
+    // empty's var for refilling w/ user's new search words
     userSearchMod = '';
 }
 
