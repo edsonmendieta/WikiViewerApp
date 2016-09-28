@@ -36,10 +36,20 @@ body {
     display: block;
 }*/
 
-#searchContainer {
+#picContainer {
     display: flex;
     justify-content: center;
     margin-top: 300px;
+    margin-bottom: 50px;
+}
+
+#dicePic {
+    cursor: pointer;
+}
+
+#searchContainer {
+    display: flex;
+    justify-content: center;
     margin-bottom: 25px;
 }
 
