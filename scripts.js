@@ -124,15 +124,37 @@ function closeBar() {
 
 }
 
-window.addEventListener('load', wikiResults, false);
+var userSearchMod;
+
+window.addEventListener('keypress', searchWords, false);
+
+function searchWords(e) {
+
+    var userWords = document.getElementById('searchBar').value;
+    var whitespace = /\s/g;
+
+    if(e.code == 'Enter') {
+
+        if((document.getElementById('searchBar').getAttribute('class')) == 'open') {
+
+            userSearchMod = userWords.replace(whitespace, '+');
+
+            wikiResults();
+
+        }
+    }
+
+}
 
 function wikiResults() {
 
     var xhr = new XMLHttpRequest();
     // wiki api COR's requires origin to be set as parameter in URL request
-    xhr.open('GET', 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info%7Cextracts&generator=search&utf8=1&formatversion=2&inprop=url&exsentences=1&exlimit=10&exintro=1&explaintext=1&exsectionformat=plain&gsrsearch=pooh+bear&origin=*');
+    xhr.open('GET', 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info%7Cextracts&generator=search&utf8=1&formatversion=2&inprop=url&exsentences=1&exlimit=10&exintro=1&explaintext=1&exsectionformat=plain&gsrsearch='+ userSearchMod + '&origin=*');
     xhr.onreadystatechange = resultHandler;
     xhr.send();
+
+    userSearchMod = '';
 }
 
 function resultHandler() {
@@ -188,18 +210,3 @@ function resultHandler() {
 
 
 }
-
-
-// window.addEventListener('keypress', searchWords, false);
-//
-// function searchWords(e) {
-//
-//     if(e.code == 'Enter') {
-//
-//         if((document.getElementById('searchBar').getAttribute('class')) == 'open') {
-//
-//             console.log(document.getElementById('searchBar').value);
-//         }
-//     }
-//
-// }
