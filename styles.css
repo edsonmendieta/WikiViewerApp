@@ -45,17 +45,29 @@ body {
 
 h1 {
     font-family: 'kaushan_scriptregular';
+    font-size: 300%;
+    color: #4F5151;
+    margin-top: 150px;
+    text-align: center;
+}
+
+#subIntroHeader {
+    font-family: 'kaushan_scriptregular';
+    color: #3FDD90;
+    text-align: center;
+    margin-top: 50px;
 }
 
 #picContainer {
     display: flex;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 150px;
     margin-bottom: 50px;
 }
 
 #dicePic {
     cursor: pointer;
+    color: #4F5151;
 }
 
 #searchContainer {
@@ -211,6 +223,7 @@ h1 {
 }
 
 footer {
+    /*font-family: 'kaushan_scriptregular';*/
     color: #4F5151;
     width: 100%;
     height: auto;
