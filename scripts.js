@@ -5,8 +5,9 @@ var topX = document.getElementById('topX');
 var bottomX = document.getElementById('bottomX');
 var box = document.getElementById('box');
 
+//window.addEventListener()
 
-// event listeners
+// event listener
 searchBar.addEventListener('click', openBar, false);
 
 
@@ -140,7 +141,7 @@ function searchWords(e) {
 
         if((document.getElementById('searchBar').getAttribute('class')) == 'open') {
 
-            // empty the divs if they aren't empty on user's search
+            // empty the divs if they are populated empty on user's search
             if(titleDivs[0].childNodes.length !== 0 && introDivs[0].childNodes.length !== 0) {
 
                 for(i = 0; i < 10; i++) {
@@ -154,7 +155,14 @@ function searchWords(e) {
 
             userSearchMod = userWords.replace(whitespace, '+');
 
+            document.getElementById('searchContainer').style.marginTop = "25px";
+
             wikiResults();
+
+            if((document.getElementById('pageWrap').getAttribute('class')) == 'gone') {
+
+                document.getElementById('pageWrap').setAttribute('class', 'visible');
+            }
 
         }
     }

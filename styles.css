@@ -26,10 +26,20 @@ body {
     height: 100%;
 }
 
+#pageWrap {
+    height: auto;
+    margin-bottom: 0;
+}
+
+/*.pageWrap:after {
+    content: '';
+    display: block;
+}*/
+
 #searchContainer {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 65%;
     margin-bottom: 25px;
 }
 
@@ -125,8 +135,13 @@ body {
     transition: width 300ms ease-in-out, left 300ms ease-in-out, top 300ms ease-in-out;
 }
 
+.gone {
+    display: none;
+}
+
 .visible {
     visibility: visible;
+    margin-bottom: 10px;
 }
 
 .hidden {
@@ -171,9 +186,9 @@ body {
 
 footer {
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    height: auto;
     text-align: center;
+    margin-top: 150px;
 }
 
 #maker {
