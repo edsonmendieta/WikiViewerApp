@@ -1,7 +1,24 @@
 /*******************
+       Fonts
+*******************/
+
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('fonts/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('fonts/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*******************
        Reset
 *******************/
 body {
+    margin: 0;
+}
+
+h1 {
     margin: 0;
 }
 
@@ -26,15 +43,9 @@ body {
     height: 100%;
 }
 
-#pageWrap {
-    height: auto;
-    margin-bottom: 0;
+h1 {
+    font-family: 'kaushan_scriptregular';
 }
-
-/*.pageWrap:after {
-    content: '';
-    display: block;
-}*/
 
 #picContainer {
     display: flex;
@@ -143,6 +154,11 @@ body {
     animation-fill-mode: forwards;
 
     transition: width 300ms ease-in-out, left 300ms ease-in-out, top 300ms ease-in-out;
+}
+
+#pageWrap {
+    height: auto;
+    margin-bottom: 0;
 }
 
 .gone {
