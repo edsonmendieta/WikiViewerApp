@@ -1,2 +1,2 @@
 # WikiViewerApp
-A Wikipedia search app.
+A Wikipedia search page.
